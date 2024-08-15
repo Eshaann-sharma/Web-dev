@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+}
+
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.stars {
+    background: url('images/photo-1456154875099-97a3a56074d3.jpeg') repeat top center;
+    animation: star-animation 50s linear infinite;
+}
+
+@keyframes star-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: -10000px 5000px; }
+}
+
+@keyframes twinkling-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: -10000px 5000px; }
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgba(0, 0, 51, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+}
+
+.intro, .game, .extra-content, .footer {
+    background-color: rgba(0, 0, 51, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+}
+
+.intro img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s;
+}
+
+.intro img:hover {
+    transform: scale(1.1);
+}
+
+.game img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s;
+}
+
+.game img:hover {
+    transform: scale(1.1);
+}
+
+.game-info h2 {
+    font-size: 24px;
+    color: #00bfff;
+}
+
+.game-info p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #b0c4de;
+}
+
+.extra-content h2 {
+    font-size: 24px;
+    color: #00bfff;
+}
+
+.footer a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+}
+
+.back-to-top:hover {
+    background-color: #1e90ff;
+}
